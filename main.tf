@@ -15,7 +15,7 @@ provider "aws" {
 #--------------------------------------------------------- Part I: VPC ---------------------------------------------------------
 
 module "vpc" {
-  source = "./modules/vpc"
+  source = "github.com/gopal1409/terraform-module-aws1/modules/vpc"
 
 
   aws_region         = var.aws_region
@@ -30,7 +30,7 @@ module "vpc" {
 #--------------------------------------------------------- Part II: Web Tier---------------------------------------------------------
 
 module "Web_Tier" {
-  source = "./modules/Web_Tier"
+  source = "github.com/gopal1409/terraform-module-aws1/modules/Web_Tier"
 
   # Web - ALB Security Group
   web_alb_sg_ingress_protocol    = var.web_alb_sg_ingress_protocol
@@ -67,7 +67,7 @@ module "Web_Tier" {
 
 #--------------------------------------------------------- Part III: App Tier ---------------------------------------------------------
 module "App_Tier" {
-  source = "./modules/App_Tier"
+  source = "github.com/gopal1409/terraform-module-aws1/modules/App_Tier"
 
 
 
@@ -136,7 +136,7 @@ module "App_Tier" {
 # --------------------------------------------------------- Part IV: DB ---------------------------------------------------------
 
 module "DB" {
-  source = "./modules/DB"
+  source = "github.com/gopal1409/terraform-module-aws1/modules/DB"
 
 
   # DB - Security Group
