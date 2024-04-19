@@ -80,7 +80,7 @@ resource "aws_lb_target_group" "web_target_group" {
 # Web - Launch Template
 resource "aws_launch_template" "web_launch_template" {
   name_prefix   = "web-launch-template"
-  image_id      = "ami-0e2e44c03b85f58b3"
+  image_id      = "ami-04e5276ebb8451442"
   instance_type = "t2.micro"
 }
 
